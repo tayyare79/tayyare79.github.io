@@ -1,5 +1,18 @@
 # harun.app auf diese Website umstellen
 
+> **Status 2026-07-30: ZURÜCKGESTELLT.** Der Namecheap-Zugang für `harun.app`
+> ist nicht auffindbar (Passwort-Reset kam nicht an, keine Namecheap-Mails im
+> Postfach). Stattdessen wird in App Store Connect direkt auf
+> `https://tayyare79.github.io/...` verwiesen — die URLs sind bereits in
+> Entwurfs-Versionen hinterlegt und gehen mit dem jeweils nächsten App-Update
+> live. Diese Anleitung bleibt für den Fall, dass der Domain-Zugang wieder
+> auftaucht.
+>
+> **Achtung:** `harun.app` läuft am **10.02.2027** ab. Ohne Zugang wird sie
+> nicht verlängert. Solange noch veröffentlichte App-Versionen auf `harun.app`
+> zeigen (aktuell Leichenschau und GOÄ), sollten deren Updates vorher
+> eingereicht werden.
+
 Ziel: `https://harun.app` soll diese GitHub-Pages-Website ausliefern statt der
 leeren React-Platzhalterseite auf dem Namecheap-Hosting.
 
