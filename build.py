@@ -92,6 +92,13 @@ APPS = [
          short="App der Pizzeria La Farine."),
 
     # Alltag
+    dict(slug="deutschstart-kids", name="DeutschStart Kids", asc_id="6811046728",
+         group="Alltag & Sonstiges", platforms="iPhone · iPad",
+         tag="Kinder & Lernen",
+         store_url="https://apps.apple.com/app/id6811046728",
+         short="Offline Deutsch-Lern-App für Kinder von 4 bis 7 Jahren: "
+               "Spiele und Aussprache, Elternbereich auf Deutsch, Türkisch "
+               "und Englisch."),
     dict(slug=None, name="Kalendera – Kalender & Termine", asc_id="6774502037",
          group="Alltag & Sonstiges", platforms="iPhone", tag="Produktivität",
          support="https://tayyare79.github.io/kalendera-support/",
@@ -232,6 +239,43 @@ APP_SUPPORT = {
         intro="Support für die App <strong>Fethiye Fly</strong>.",
         faq=[],
     ),
+    "deutschstart-kids": dict(
+        intro="Support und Datenschutz für die App <strong>DeutschStart Kids</strong> – "
+              "die Offline-App zum Deutschlernen für Kinder von 4 bis 7 Jahren "
+              "(Kindergarten bis Schulstart). Spielerische Übungen mit Aussprache "
+              "und ein Elternbereich auf Deutsch, Türkisch und Englisch.",
+        faq=[
+            ("Funktioniert die App ohne Internet?",
+             "Ja, vollständig. Alle Inhalte, Spiele und die Aussprache sind in der "
+             "App enthalten – es wird keine Internetverbindung benötigt."),
+            ("Wie bekomme ich eine bessere (Premium-)Stimme für die Aussprache?",
+             "Die App nutzt die deutschen Stimmen Ihres Geräts. Eine hochwertigere "
+             "Stimme laden Sie so: iOS-Einstellungen → Bedienungshilfen → "
+             "Gesprochene Inhalte → Stimmen → Deutsch – dort eine Premium-Stimme "
+             "auswählen und laden. Die App verwendet sie danach automatisch."),
+            ("Wie funktioniert das Abo?",
+             "Das Abo wird ausschließlich über Apple abgeschlossen und abgerechnet. "
+             "Verwalten oder kündigen können Sie es jederzeit in den Einstellungen "
+             "Ihrer Apple-ID unter „Abonnements“ – nicht in der App selbst."),
+            ("Wo wird der Lernfortschritt gespeichert?",
+             "Nur lokal auf Ihrem Gerät. Der Fortschritt wird nicht an den "
+             "Entwickler oder an Dritte übertragen. Beim Löschen der App wird er "
+             "ebenfalls entfernt."),
+            ("Was ist das Parent-Gate (Elternsicherung)?",
+             "Der Elternbereich – etwa für Einstellungen und Käufe – ist durch eine "
+             "kleine Aufgabe geschützt, die nur Erwachsene lösen können. So können "
+             "Kinder diese Bereiche nicht versehentlich öffnen."),
+        ],
+        stand="September 2026",
+        privacy_extra="Lernfortschritt und Einstellungen werden ausschließlich "
+                      "lokal auf Ihrem Gerät gespeichert (UserDefaults) und "
+                      "nicht an Server übertragen.",
+        purchase_html="<p><strong>Käufe.</strong> In-App-Käufe und Abos werden "
+                      "ausschließlich über Apple abgewickelt. Die Zahlungsdaten "
+                      "verarbeitet Apple; ich erhalte weder Zahlungsdaten noch "
+                      "Ihre Apple-ID. Für diesen Vorgang gilt Apples "
+                      "Datenschutzerklärung.</p>",
+    ),
     "mathestart": dict(
         intro="Support und Datenschutz für die App <strong>MatheStart</strong> "
               "(offline Mathe-Vorschule für Kindergarten bis Schulstart).",
@@ -303,6 +347,11 @@ def store_url(asc_id):
     return f"https://apps.apple.com/de/app/id{asc_id}"
 
 
+def app_store_url(app):
+    """Store-Link einer App – Standard-URL oder per `store_url` überschrieben."""
+    return app.get("store_url") or store_url(app["asc_id"])
+
+
 def support_href(app, depth):
     """Support-Ziel einer App – eigene Seite oder externe URL."""
     up = "../" * depth
@@ -333,7 +382,7 @@ def build_index():
         cards.append('<div class="grid">')
         for a in apps:
             store = "" if a.get("unreleased") else \
-                f'<a href="{store_url(a["asc_id"])}">Im App Store</a>'
+                f'<a href="{app_store_url(a)}">Im App Store</a>'
             cards.append(f"""  <article class="card">
     <span class="badge">{html.escape(a['tag'])}</span>
     <h3>{html.escape(a['name'])}</h3>
@@ -429,11 +478,18 @@ def build_app_page(app):
 
     store_block = ""
     if not app.get("unreleased"):
-        store_block = (f'<p><a class="btn" href="{store_url(app["asc_id"])}">'
+        store_block = (f'<p><a class="btn" href="{app_store_url(app)}">'
                        f'Im App Store ansehen</a></p>')
 
     privacy_extra = cfg.get("privacy_extra", "")
     privacy_extra_html = f"<p>{privacy_extra}</p>" if privacy_extra else ""
+
+    stand = cfg.get("stand", "Juli 2026")
+    purchase_html = cfg.get("purchase_html",
+        "<p><strong>Käufe.</strong> Ein In-App-Kauf wird ausschließlich über Apple\n"
+        "  abgewickelt. Die Zahlungsdaten verarbeitet Apple; ich erhalte weder\n"
+        "  Zahlungsdaten noch Ihre Apple-ID. Für diesen Vorgang gilt Apples\n"
+        "  Datenschutzerklärung.</p>")
 
     body = f"""<div class="page"><div class="wrap prose">
   <p class="kicker">Support</p>
@@ -452,7 +508,7 @@ def build_app_page(app):
   {faq_html}
 
   <h2 id="datenschutz">Datenschutz</h2>
-  <p>Stand: Juli 2026 · Verantwortlich: {DEV}, erreichbar unter
+  <p>Stand: {stand} · Verantwortlich: {DEV}, erreichbar unter
   <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
   <p><strong>Keine Datenerhebung durch den Entwickler.</strong> Die App
   erhebt, speichert und überträgt keine personenbezogenen Daten an mich oder an
@@ -464,10 +520,7 @@ def build_app_page(app):
   verfügbar. Sie können sie jederzeit in der App löschen; beim Entfernen der App
   werden sie ebenfalls gelöscht. Für Ihre eigene Datensicherung sind Sie
   verantwortlich – etwa über ein verschlüsseltes Geräte-Backup.</p>
-  <p><strong>Käufe.</strong> Ein In-App-Kauf wird ausschließlich über Apple
-  abgewickelt. Die Zahlungsdaten verarbeitet Apple; ich erhalte weder
-  Zahlungsdaten noch Ihre Apple-ID. Für diesen Vorgang gilt Apples
-  Datenschutzerklärung.</p>
+  {purchase_html}
   <p><strong>Ihre Rechte.</strong> Da mir keine personenbezogenen Daten
   vorliegen, kann ich keine Auskunft über gespeicherte Daten erteilen – es sind
   schlicht keine vorhanden. Wenn Sie mir eine E-Mail schreiben, verarbeite ich
