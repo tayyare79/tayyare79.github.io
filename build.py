@@ -107,6 +107,13 @@ APPS = [
          group="Alltag & Sonstiges", platforms="iPhone", tag="Spiel",
          support="https://tayyare79.github.io/starship-catch-support/",
          short="Arcade-Spiel: Boosterlandung mit steigendem Schwierigkeitsgrad."),
+
+    dict(slug="mathestart", name="MatheStart", asc_id="",
+         group="Alltag & Sonstiges", platforms="iPhone · iPad",
+         tag="Lernen", unreleased=True,
+         short="Offline Mathe-Vorschule für 4–7: kurze Tagesrunden, Zählen, "
+               "Formen und Mengen — ohne Werbung, ohne Tracking.",
+         local_data=True),
 ]
 
 GROUPS = ["Medizin & Praxis", "Reise & Städte", "Hotels & Gastronomie", "Alltag & Sonstiges"]
@@ -268,6 +275,25 @@ APP_SUPPORT = {
                       "verarbeitet Apple; ich erhalte weder Zahlungsdaten noch "
                       "Ihre Apple-ID. Für diesen Vorgang gilt Apples "
                       "Datenschutzerklärung.</p>",
+    ),
+    "mathestart": dict(
+        intro="Support und Datenschutz für die App <strong>MatheStart</strong> "
+              "(offline Mathe-Vorschule für Kindergarten bis Schulstart).",
+        faq=[
+            ("Für welches Alter ist die App?",
+             "Für Kinder von etwa 4 bis 7 Jahren (Kindergarten bis Schulstart). "
+             "Der Elternbereich ist hinter einem Rechen-Gate."),
+            ("Braucht die App Internet?",
+             "Nein. Alle Spiele und der Fortschritt bleiben auf dem Gerät. "
+             "Zahlen und kurze Anweisungen nutzt die App über die "
+             "Apple-Sprachausgabe auf dem Gerät, nicht über die Cloud."),
+            ("Gibt es ein Abo oder In-App-Käufe?",
+             "In Version 1.0 nicht. Die App ist ohne StoreKit/IAP."),
+        ],
+        privacy_extra="Die optionale Sprachausgabe nutzt ausschließlich Apples "
+                      "On-Device-TTS (AVSpeechSynthesizer). Es werden keine "
+                      "Kinderstimmen oder Lernstände in die Cloud übertragen. "
+                      "Version 1.0 enthält keine In-App-Käufe.",
     ),
 }
 
