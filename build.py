@@ -233,23 +233,16 @@ APP_SUPPORT = {
         faq=[],
     ),
     "mathestart": dict(
-        intro="Support und Datenschutz für die App <strong>MatheStart</strong> "
-              "(offline Mathe-Vorschule für Kindergarten bis Schulstart).",
+        intro="Support und Datenschutz für <strong>MatheStart</strong> – Mathematik für Kinder von etwa 4 bis 7 Jahren.",
         faq=[
-            ("Für welches Alter ist die App?",
-             "Für Kinder von etwa 4 bis 7 Jahren (Kindergarten bis Schulstart). "
-             "Der Elternbereich ist hinter einem Rechen-Gate."),
-            ("Braucht die App Internet?",
-             "Nein. Alle Spiele und der Fortschritt bleiben auf dem Gerät. "
-             "Zahlen und kurze Anweisungen nutzt die App über die "
-             "Apple-Sprachausgabe auf dem Gerät, nicht über die Cloud."),
-            ("Gibt es ein Abo oder In-App-Käufe?",
-             "In Version 1.0 nicht. Die App ist ohne StoreKit/IAP."),
+            ("Für welches Alter ist die App?", "Für Kinder von etwa 4 bis 7 Jahren. Der Elternbereich ist durch eine Rechenaufgabe geschützt."),
+            ("Braucht die App Internet?", "Die Lerninhalte, Bilder, Sprachaufnahmen und Fortschritte funktionieren offline. Für den optionalen Kauf und die Wiederherstellung ab Version 1.2 ist eine Verbindung zum App Store erforderlich."),
+            ("Gibt es ein Abo oder In-App-Käufe?", "Kein Abo. Ab Version 1.2 schaltet das optionale Paket „Rechnen bis 20“ durch einen Einmalkauf 20 Zusatzlektionen dauerhaft frei. Spätere eigenständige Pakete sind nicht enthalten. Vier Einstiegslektionen und alle fünf bisherigen Spielwelten bleiben kostenlos. Der Preis steht im geschützten Elternbereich in Ihrer Landeswährung. Version 1.1 und ältere Versionen enthalten diesen Kauf noch nicht."),
+            ("Wie stelle ich den Kauf wieder her?", "Im Elternbereich auf „Käufe wiederherstellen“ tippen und denselben Apple Account verwenden. Das Zurücksetzen des Lernfortschritts entfernt den Kauf nicht."),
+            ("English: purchases and privacy", "From version 1.2, the optional Maths up to 20 pack permanently unlocks 20 extra lessons with a one-time purchase. No subscription; future separate packs are not included. Four introductory lessons and all five existing worlds remain free. Learning content works offline. Purchase and restore require Apple connectivity and are parent-gated. Apple processes payment and purchase records; the developer receives no payment-card details. Learning progress stays on the device. No ads, analytics, tracking or child accounts."),
+            ("Türkçe: satın alma ve gizlilik", "1.2 sürümünden itibaren isteğe bağlı 20’ye kadar matematik paketi, tek seferlik satın almayla 20 ek dersi kalıcı olarak açar. Abonelik yoktur; gelecekteki ayrı paketler dahil değildir. İlk dört ders ve mevcut beş oyun dünyası ücretsiz kalır. Dersler çevrimdışı çalışır. Satın alma ve geri yükleme Apple bağlantısı gerektirir ve ebeveyn kilidi arkasındadır. Ödeme ve satın alma kayıtlarını Apple işler; geliştirici kart bilgilerini almaz. Öğrenme ilerlemesi cihazda kalır. Reklam, analiz, takip veya çocuk hesabı yoktur."),
         ],
-        privacy_extra="Die optionale Sprachausgabe nutzt ausschließlich Apples "
-                      "On-Device-TTS (AVSpeechSynthesizer). Es werden keine "
-                      "Kinderstimmen oder Lernstände in die Cloud übertragen. "
-                      "Version 1.0 enthält keine In-App-Käufe.",
+        privacy_extra="Stand für MatheStart: 27. September 2026. Bilder und Sprachaufnahmen sind in der App enthalten; Apple-Sprachausgabe auf dem Gerät dient als Ersatz. Kein Cloud-TTS und keine Übertragung von Kinderstimmen oder Lernständen. Ab Version 1.2 ist ein optionaler Einmalkauf über Apple StoreKit verfügbar. Apple verarbeitet Zahlung und Kaufhistorie; die App prüft die Kaufberechtigung auf dem Gerät. Wir erhalten keine Zahlungs- oder Kartendaten. Kauf, Wiederherstellung und externe Links sind durch die Elternsperre geschützt. Lernfortschritt und Einstellungen bleiben lokal und können im Elternbereich zurückgesetzt werden. Der Kauf bleibt dabei erhalten.",
     ),
 }
 
