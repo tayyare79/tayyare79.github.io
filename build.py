@@ -523,6 +523,8 @@ def build_app_page(app):
   <p><a href="../support/">← Zurück zur Support-Übersicht</a></p>
 </div></div>
 """
+    if slug == "mathestart":
+        body = body.replace("erhebt, speichert und überträgt keine personenbezogenen Daten an mich oder an\n  Dritte.", "überträgt keine Kinder- oder Lerndaten an den Entwickler. Die optionale\n  Kaufabwicklung erfolgt über Apple, wie unten beschrieben.")
     write(f"{slug}/index.html",
           head(f"{app['name']} – Support & Datenschutz",
                f"Support, häufige Fragen und Datenschutzhinweise zur App "
