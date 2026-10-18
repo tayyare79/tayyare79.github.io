@@ -114,6 +114,13 @@ APPS = [
          short="Offline Mathe-Vorschule für 4–7: kurze Tagesrunden, Zählen, "
                "Formen und Mengen — ohne Werbung, ohne Tracking.",
          local_data=True),
+    dict(slug="physikstart", name="PhysikStart", asc_id="",
+         group="Alltag & Sonstiges", platforms="iPhone · iPad",
+         tag="Bildung · bald verfügbar", unreleased=True,
+         short="Physik für 4–14 Jahre: 72 Missionen in drei Lernstufen und sechs "
+               "Experimentierwelten. Lernen auf Deutsch, Englisch und Türkisch – "
+               "offline, ohne Werbung oder Tracking.",
+         local_data=True),
 ]
 
 GROUPS = ["Medizin & Praxis", "Reise & Städte", "Hotels & Gastronomie", "Alltag & Sonstiges"]
@@ -288,6 +295,145 @@ APP_SUPPORT = {
         ],
         privacy_extra="Stand für MatheStart: 27. September 2026. Bilder und Sprachaufnahmen sind in der App enthalten; Apple-Sprachausgabe auf dem Gerät dient als Ersatz. Kein Cloud-TTS und keine Übertragung von Kinderstimmen oder Lernständen. Ab Version 1.2 ist ein optionaler Einmalkauf über Apple StoreKit verfügbar. Apple verarbeitet Zahlung und Kaufhistorie; die App prüft die Kaufberechtigung auf dem Gerät. Wir erhalten keine Zahlungs- oder Kartendaten. Kauf, Wiederherstellung und externe Links sind durch die Elternsperre geschützt. Lernfortschritt und Einstellungen bleiben lokal und können im Elternbereich zurückgesetzt werden. Der Kauf bleibt dabei erhalten.",
     ),
+    "physikstart": dict(
+        intro="Support und Datenschutz für <strong>PhysikStart</strong>: Physik entdecken "
+              "für Kinder und Jugendliche von etwa 4 bis 14 Jahren, mit drei Lernstufen, "
+              "sechs Experimentierwelten und 72 Missionen auf Deutsch, Englisch und Türkisch. "
+              "Für iPhone und iPad ab iOS/iPadOS 17. Die Experimente verwenden vereinfachte Modelle.",
+        stand="18. Oktober 2026",
+        release_notice="<p>Die Veröffentlichung im App Store wird vorbereitet.</p>",
+        common_faq=[],
+        faq=[
+            ("Was ist kostenlos, was umfasst PhysikStart Plus?",
+             "18 vollständige Missionen, die Schattenwerkstatt, alle drei Sprachen und bis zu "
+             "drei lokale Profile bleiben kostenlos. PhysikStart Plus schaltet durch einen "
+             "einmaligen Kauf 54 weitere Missionen (insgesamt 72) und alle sechs offenen Labore frei. "
+             "Kein Abonnement. Der Preis wird im geschützten Elternbereich in Ihrer Landeswährung "
+             "angezeigt. Spätere eigenständige Pakete sind nicht zugesagt."),
+            ("Braucht die App Internet?",
+             "Lerninhalte, Experimente, Forscherbuch und die enthaltenen Sprachaufnahmen funktionieren "
+             "offline. Kauf, Wiederherstellung und die Prüfung des Kaufstatus über Apple können eine "
+             "App-Store-Verbindung benötigen. Es gibt kein App-Konto und keinen eigenen Server für Lerndaten."),
+            ("Wie stelle ich einen Kauf wieder her?",
+             "Öffnen Sie den Elternbereich mit Ihrer PIN und tippen Sie auf „Käufe wiederherstellen“. "
+             "Verwenden Sie denselben Apple Account wie beim Kauf. Das Zurücksetzen des Lernfortschritts "
+             "löscht den Kauf nicht. Kauf und Wiederherstellung übertragen kein Forscherbuch auf ein anderes Gerät."),
+            ("Wie funktionieren Profile, Forscherbuch und Löschen?",
+             "Bis zu drei Profile speichern Namen oder Spitznamen, Lernstufe, Fortschritt und Versuche "
+             "lokal. Im Elternbereich können Sie Namen ändern, den Fortschritt des gewählten Profils "
+             "zurücksetzen und zusätzliche Profile löschen; ein Profil bleibt bestehen. Es gibt keine "
+             "Synchronisierung zwischen Geräten durch die App. Betriebssystem-Backups richten sich "
+             "nach Ihren Geräteeinstellungen."),
+            ("Was schützt die Eltern-PIN, und was passiert bei einer vergessenen PIN?",
+             "Eine sechsstellige PIN schützt Käufe, Profile und Einstellungen. Erwachsene sollten sie "
+             "selbst einrichten; die Einrichtung prüft weder Alter noch Elternrolle. Die PIN lässt sich "
+             "mit der bisherigen PIN ändern. Es gibt keinen Wiederherstellungs- oder Umgehungscode. "
+             "Bitte löschen Sie die App nicht als Entsperrversuch: Lerndaten können verloren gehen, "
+             "während der PIN-Prüfwert im Schlüsselbund erhalten bleibt."),
+            ("Woher kommen die Stimmen? Wird mein Kind aufgenommen?",
+             "Die enthaltenen Sprachaufnahmen wurden vorab mit KI-Spracherzeugung erstellt und werden "
+             "lokal abgespielt. Es wird kein KI-Dienst während der Nutzung aufgerufen. Wenn eine Aufnahme "
+             "nicht verfügbar ist, kann eine vorhandene Systemstimme auf dem Gerät einspringen. Ohne "
+             "passende Stimme bleiben alle Texte lesbar. Vorlesen und Versuchstöne starten nur nach "
+             "Antippen; verwenden Sie eine niedrige Gerätelautstärke. Die App nutzt kein Mikrofon und "
+             "zeichnet keine Kinderstimmen auf."),
+            ("Wie melde ich ein Problem?",
+             f"Schreiben Sie an <a href=\"mailto:{EMAIL}\">{EMAIL}</a> und nennen Sie Gerät, "
+             "iOS-/iPadOS-Version, App-Version und die betroffene Mission. Bitte senden Sie keine "
+             "Eltern-PIN, Namen von Kindern oder ungeschwärzten persönlichen Screenshots."),
+            ("English: support and purchases",
+             "PhysikStart offers physics activities for ages 4–14 in German, English and Turkish. "
+             "18 missions, the shadow lab, all languages and up to three local profiles are free. "
+             "A one-time PhysikStart Plus purchase unlocks 54 more missions and all six open labs; "
+             "there is no subscription or promise of future separate packs. Learning works offline. "
+             "Purchases, restore and Apple entitlement checks may need internet. Restore in the PIN-protected "
+             "parent area using the same Apple Account. Learning progress does not sync through the app. "
+             "A forgotten PIN cannot be reset or bypassed; deleting the app may lose progress without "
+             "removing its Keychain PIN record. Contact the email above with device, OS, app version and "
+             "mission, without children's names or your PIN. Privacy details in English follow below."),
+            ("Türkçe: destek ve satın alma",
+             "PhysikStart, 4–14 yaş için Almanca, İngilizce ve Türkçe fizik etkinlikleri sunar. "
+             "18 görev, gölge laboratuvarı, tüm diller ve en fazla üç yerel profil ücretsizdir. "
+             "Tek seferlik PhysikStart Plus satın alımı 54 ek görevi ve altı serbest laboratuvarın tümünü açar. "
+             "Abonelik yoktur; gelecekteki ayrı paketler vaat edilmez. Öğrenme çevrimdışı çalışır. "
+             "Satın alma, geri yükleme ve Apple satın alma hakkı kontrolleri internet gerektirebilir. "
+             "PIN korumalı ebeveyn alanında aynı Apple Hesabı ile satın alımları geri yükleyebilirsiniz. "
+             "Uygulama öğrenme ilerlemesini cihazlar arasında eşitlemez. Unutulan PIN için kurtarma veya "
+             "atlama kodu yoktur; uygulamayı silmek ilerlemeyi kaybettirebilir, ancak Anahtar Zinciri PIN "
+             "kaydı kalabilir. Destek için yukarıdaki adrese cihaz, sistem ve uygulama sürümü ile görevi "
+             "yazın; çocuk adı veya PIN göndermeyin. Türkçe gizlilik bilgileri aşağıdadır."),
+        ],
+        privacy_html="""<p><strong>Lokale Lern-App.</strong> PhysikStart hat keine Nutzerkonten, Werbung,
+  Analyse- oder Trackingdienste. Profile mit Namen oder Spitznamen, Lernstufe, Einstellungen,
+  Missionsentwürfe und Forscherbuch werden auf dem Gerät gespeichert. Die App überträgt diese
+  Kinder- und Lerndaten nicht an den Entwickler oder an KI-Dienste. Sie benötigt weder Mikrofon
+  noch Kamera, Kontakte oder Standort.</p>
+  <p><strong>Eltern-PIN und Backups.</strong> Ein gesalzener Prüfwert der PIN und Angaben zur
+  Begrenzung von Fehlversuchen liegen im lokalen Apple-Schlüsselbund; die PIN wird nicht im Klartext
+  gespeichert. Dieser Schlüsselbundeintrag wird von der App nicht über iCloud synchronisiert.
+  Lernfortschritt lässt sich im Elternbereich zurücksetzen, zusätzliche Profile lassen sich löschen.
+  Der PIN-Eintrag kann nach dem Entfernen der App bestehen bleiben. Ob das Betriebssystem andere
+  App-Daten sichert oder wiederherstellt, hängt von Geräteeinstellungen und Apple-Diensten ab;
+  die App bietet keine eigene Cloud-Sicherung oder geräteübergreifende Synchronisierung.</p>
+  <p><strong>Vorlesen und KI.</strong> Vorproduzierte KI-Sprachaufnahmen gehören zum App-Paket.
+  Ihre Wiedergabe erfolgt offline und nur auf Wunsch. Als Ersatz kann eine auf dem Gerät vorhandene
+  Apple-Systemstimme genutzt werden. Es gibt keine Cloud-KI oder Cloud-Spracherzeugung während der
+  App-Nutzung, keine Sprachaufnahme und keine Übermittlung von Kinderstimmen.</p>
+  <p><strong>Apple-Käufe.</strong> Der optionale Einmalkauf PhysikStart Plus, Wiederherstellung
+  und Kaufberechtigungen werden über Apple StoreKit abgewickelt. Apple verarbeitet die dafür
+  erforderlichen Account-, Zahlungs- und Transaktionsdaten. Die App prüft die Kaufberechtigung;
+  der Entwickler erhält keine Kartendaten. Es gilt ergänzend
+  <a href="https://www.apple.com/legal/privacy/">Apples Datenschutzerklärung</a>.
+  Die App sendet dabei keine Profile oder Lernstände an Apple.</p>
+  <p><strong>Support und Datenschutzanfragen.</strong> Wenn Sie uns eine E-Mail schreiben,
+  verarbeiten wir die Absenderadresse und Ihre Nachricht zur Bearbeitung der Anfrage.
+  Diese Angaben werden gelöscht, sobald sie nicht mehr benötigt werden und keine gesetzlichen
+  Aufbewahrungspflichten entgegenstehen. Bitte senden Sie keine PIN oder Daten von Kindern.
+  Für Auskunft, Berichtigung oder Löschung von an uns gesendeten Angaben sowie andere
+  Datenschutzfragen nutzen Sie die oben genannte Kontaktadresse. Sie können sich auch an eine
+  Datenschutz-Aufsichtsbehörde wenden. Die lokal gespeicherten Lernprofile kann der Entwickler
+  nicht auslesen oder aus der Ferne löschen.</p>
+  <p><strong>Diese Support-Website.</strong> Die Seite wird über GitHub Pages bereitgestellt.
+  Beim Aufruf verarbeitet der Hostinganbieter technische Zugriffsdaten, etwa die IP-Adresse;
+  dies ist vom Offline-Betrieb der App getrennt. Auf dieser Seite sind keine Analyse- oder
+  Werbeskripte eingebunden. Weitere Angaben stehen in der
+  <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub-Datenschutzerklärung</a>.</p>
+  <h3 lang="en">Privacy — English</h3>
+  <p lang="en">The developer is Harun Nakas, reachable at the email above. Profiles (names or
+  nicknames), learning progress, drafts and settings stay in local app storage; the app sends none
+  of these to the developer or AI services. There are no accounts, ads, analytics, tracking, microphone
+  recordings or live cloud AI. Preproduced AI narration is included and plays offline on request,
+  with an available on-device Apple voice as fallback. A salted PIN verifier and failed-attempt
+  limits are stored in the device Keychain without app-enabled iCloud synchronization; the record
+  may survive app deletion. Progress can be reset and additional profiles deleted in the parent area.
+  Operating-system backup and restore depend on device settings; the app provides no cloud sync.
+  Apple handles payment, account and transaction data for the optional one-time purchase, restore
+  and entitlement checks; the developer receives no card details. Profiles and progress are not sent
+  to Apple by the app. If you email support, your address and message are processed to answer you
+  and retained only as needed, subject to legal retention duties. Contact us for access, correction,
+  deletion or other privacy requests; you may also contact a data protection authority. We cannot
+  remotely read or erase local profiles. This GitHub Pages website may produce technical hosting
+  logs, including IP addresses, separately from the offline app; it embeds no advertising or analytics
+  scripts. Apple and GitHub privacy policies are linked above.</p>
+  <h3 lang="tr">Gizlilik — Türkçe</h3>
+  <p lang="tr">Veri sorumlusu, yukarıdaki e-posta adresinden ulaşabileceğiniz Harun Nakas’tır.
+  Profil adları veya takma adlar, öğrenme ilerlemesi, taslaklar ve ayarlar cihazda saklanır;
+  uygulama bunları geliştiriciye veya yapay zekâ hizmetlerine göndermez. Hesap, reklam, analiz,
+  takip, mikrofon kaydı veya kullanım sırasında bulut yapay zekâsı yoktur. Önceden üretilmiş yapay
+  zekâ sesleri uygulamaya dahildir ve istek üzerine çevrimdışı çalınır; gerekirse cihazda bulunan
+  bir Apple sesi kullanılır. PIN’in kendisi yerine tuzlanmış doğrulama değeri ve hatalı deneme
+  sınırları, uygulamanın iCloud eşitlemesini açmadığı cihaz Anahtar Zinciri’nde saklanır; bu kayıt
+  uygulama silindikten sonra kalabilir. Ebeveyn alanında ilerleme sıfırlanabilir ve ek profiller
+  silinebilir. İşletim sistemi yedekleme ve geri yüklemesi cihaz ayarlarına bağlıdır; uygulama bulut
+  eşitlemesi sunmaz. İsteğe bağlı tek seferlik satın alma, geri yükleme ve hak kontrolleri için
+  hesap, ödeme ve işlem verilerini Apple işler; geliştirici kart bilgilerini almaz. Uygulama profil
+  veya ilerlemeyi Apple’a göndermez. Destek e-postanızdaki adres ve mesaj yanıt vermek için işlenir;
+  gerekli süre ve yasal saklama yükümlülükleri dışında tutulmaz. Erişim, düzeltme, silme ve diğer
+  gizlilik talepleri için bize, ayrıca yetkili veri koruma makamına başvurabilirsiniz. Yerel
+  profilleri uzaktan okuyamaz veya silemeyiz. Bu GitHub Pages sitesinin barındırılması, çevrimdışı
+  uygulamadan ayrı olarak IP adresi gibi teknik erişim kayıtları oluşturabilir; sayfada reklam veya
+  analiz betikleri yoktur. Apple ve GitHub gizlilik açıklamaları yukarıda bağlantılıdır.</p>""",
+    ),
 }
 
 # --------------------------------------------------------------------------
@@ -381,7 +527,7 @@ def build_index():
     <h3>{html.escape(a['name'])}</h3>
     <p>{a['short']}</p>
     <div class="links">
-      {store}
+{('      ' + store) if store else ''}
       <a href="{support_href(a, 0)}">Support</a>
     </div>
   </article>""")
@@ -463,13 +609,13 @@ def build_support_hub():
 def build_app_page(app):
     slug = app["slug"]
     cfg = APP_SUPPORT[slug]
-    faq = cfg["faq"] + FAQ_COMMON
+    faq = cfg["faq"] + cfg.get("common_faq", FAQ_COMMON)
 
     faq_html = "".join(
         f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in faq
     )
 
-    store_block = ""
+    store_block = cfg.get("release_notice", "")
     if not app.get("unreleased"):
         store_block = (f'<p><a class="btn" href="{app_store_url(app)}">'
                        f'Im App Store ansehen</a></p>')
@@ -483,6 +629,23 @@ def build_app_page(app):
         "  abgewickelt. Die Zahlungsdaten verarbeitet Apple; ich erhalte weder\n"
         "  Zahlungsdaten noch Ihre Apple-ID. Für diesen Vorgang gilt Apples\n"
         "  Datenschutzerklärung.</p>")
+
+    privacy_html = cfg.get("privacy_html", f"""<p><strong>Keine Datenerhebung durch den Entwickler.</strong> Die App
+  erhebt, speichert und überträgt keine personenbezogenen Daten an mich oder an
+  Dritte. Es sind keine Analyse-, Tracking- oder Werbedienste eingebunden, und
+  es besteht kein Nutzerkonto.</p>
+  {privacy_extra_html}
+  <p><strong>Speicherung auf dem Gerät.</strong> Alle in der App erfassten
+  Inhalte werden ausschließlich lokal gespeichert und sind nur auf Ihrem Gerät
+  verfügbar. Sie können sie jederzeit in der App löschen; beim Entfernen der App
+  werden sie ebenfalls gelöscht. Für Ihre eigene Datensicherung sind Sie
+  verantwortlich – etwa über ein verschlüsseltes Geräte-Backup.</p>
+  {purchase_html}
+  <p><strong>Ihre Rechte.</strong> Da mir keine personenbezogenen Daten
+  vorliegen, kann ich keine Auskunft über gespeicherte Daten erteilen – es sind
+  schlicht keine vorhanden. Wenn Sie mir eine E-Mail schreiben, verarbeite ich
+  Ihre Adresse und Ihre Nachricht ausschließlich zur Beantwortung Ihrer Anfrage
+  und lösche sie, sobald der Vorgang abgeschlossen ist.</p>""")
 
     body = f"""<div class="page"><div class="wrap prose">
   <p class="kicker">Support</p>
@@ -503,22 +666,7 @@ def build_app_page(app):
   <h2 id="datenschutz">Datenschutz</h2>
   <p>Stand: {stand} · Verantwortlich: {DEV}, erreichbar unter
   <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-  <p><strong>Keine Datenerhebung durch den Entwickler.</strong> Die App
-  erhebt, speichert und überträgt keine personenbezogenen Daten an mich oder an
-  Dritte. Es sind keine Analyse-, Tracking- oder Werbedienste eingebunden, und
-  es besteht kein Nutzerkonto.</p>
-  {privacy_extra_html}
-  <p><strong>Speicherung auf dem Gerät.</strong> Alle in der App erfassten
-  Inhalte werden ausschließlich lokal gespeichert und sind nur auf Ihrem Gerät
-  verfügbar. Sie können sie jederzeit in der App löschen; beim Entfernen der App
-  werden sie ebenfalls gelöscht. Für Ihre eigene Datensicherung sind Sie
-  verantwortlich – etwa über ein verschlüsseltes Geräte-Backup.</p>
-  {purchase_html}
-  <p><strong>Ihre Rechte.</strong> Da mir keine personenbezogenen Daten
-  vorliegen, kann ich keine Auskunft über gespeicherte Daten erteilen – es sind
-  schlicht keine vorhanden. Wenn Sie mir eine E-Mail schreiben, verarbeite ich
-  Ihre Adresse und Ihre Nachricht ausschließlich zur Beantwortung Ihrer Anfrage
-  und lösche sie, sobald der Vorgang abgeschlossen ist.</p>
+  {privacy_html}
 
   <p><a href="../support/">← Zurück zur Support-Übersicht</a></p>
 </div></div>
