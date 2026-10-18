@@ -123,6 +123,82 @@ APPS = [
          local_data=True),
 ]
 
+APPS.append({'slug': 'chemiestart',
+ 'name': 'ChemieStart',
+ 'asc_id': '',
+ 'group': 'Alltag & Sonstiges',
+ 'platforms': 'iPhone · iPad',
+ 'tag': 'Bildung · bald verfügbar',
+ 'unreleased': True,
+ 'short': 'Chemie in 72 virtuellen Missionen entdecken. Drei Lernstufen, Deutsch, Englisch und '
+          'Türkisch. Offline lernen, ohne Werbung und Tracking.',
+ 'local_data': True})
+APP_CHEMIESTART_SUPPORT = {'intro': 'Support und Datenschutz für <strong>ChemieStart</strong>: 72 Missionen in sechs virtuellen '
+          'Chemiewelten und drei frei wählbaren Lernstufen. Deutsch, Englisch und Türkisch. Für iPhone '
+          'und iPad ab iOS/iPadOS 17. Die Veröffentlichung im App Store wird vorbereitet.',
+ 'stand': '18. Oktober 2026',
+ 'common_faq': [],
+ 'faq': [('Was ist kostenlos, was umfasst Plus?',
+          '18 Missionen bleiben kostenlos. ChemieStart Plus schaltet alle 72 Missionen durch einen '
+          'Einmalkauf frei. Deutschland: 9,99 €. In anderen Ländern gilt der im Elternbereich '
+          'angezeigte App-Store-Preis. Kein Abo.'),
+         ('Wie stelle ich Plus wieder her?',
+          'Im Elternbereich mit Ihrer PIN anmelden und „Käufe wiederherstellen“ wählen. Verwenden Sie '
+          'denselben Apple Account wie beim Kauf. Apple verwaltet den Kauf; das Zurücksetzen des '
+          'Lernfortschritts löscht ihn nicht. Lernstände werden dabei nicht auf andere Geräte '
+          'übertragen.'),
+         ('Braucht die App Internet?',
+          'Die Lerninhalte und alle enthaltenen OpenAI-Sprachaufnahmen funktionieren offline. Für Kauf '
+          'und Wiederherstellung ist eine Verbindung zu Apple erforderlich. Es gibt kein App-Konto, '
+          'keine Werbung, keine Analyse und kein Tracking.'),
+         ('Welche Experimente sind sicher?',
+          'Die App zeigt vereinfachte Modelle. Hitze, Feuer, Destillation und Gefahrstoffe bleiben '
+          'ausschließlich virtuell. Optionale Küchenkarten sind standardmäßig ausgeschaltet, nur für '
+          'Erwachsene zugänglich und enthalten Sicherheitshinweise. Keine gefährlichen Stoffe '
+          'nachmischen.'),
+         ('Was passiert mit der Eltern-PIN?',
+          'Die PIN wird nur als gesalzener Hash im Schlüsselbund dieses Geräts gespeichert. Der '
+          'Entwickler kann sie nicht lesen. Ein Schlüsselbundeintrag kann auch nach Löschen und '
+          'Neuinstallation der App erhalten bleiben.'),
+         ('English: purchase and privacy',
+          '18 missions are free. ChemieStart Plus unlocks all 72 missions with one purchase, no '
+          'subscription. The local App Store price appears in the parent area. Restore with the same '
+          'Apple Account. Learning content and bundled AI-generated OpenAI narration work offline. '
+          'Profiles, progress and notebook entries stay on the device; no ads, analytics, tracking or '
+          'app account. Apple handles payment and purchase records. The developer receives no card '
+          'details. Contact support by email; your address and message are used to handle the request.'),
+         ('Türkçe: satın alma ve gizlilik',
+          '18 görev ücretsizdir. ChemieStart Plus tek seferlik satın almayla 72 görevin tamamını açar; '
+          'abonelik yoktur. Yerel App Store fiyatı ebeveyn alanında gösterilir. Geri yüklemek için aynı '
+          'Apple Hesabını kullanın. Dersler ve uygulamadaki yapay zekâ ile üretilmiş OpenAI sesleri '
+          'çevrimdışı çalışır. Profiller, ilerleme ve laboratuvar defteri cihazda kalır. Reklam, '
+          'analiz, takip veya uygulama hesabı yoktur. Ödemeyi ve satın alma kayıtlarını Apple işler; '
+          'geliştirici kart bilgilerini almaz. Destek e-postanız ve adresiniz yalnızca talebinizi '
+          'yanıtlamak için işlenir.')],
+ 'privacy_html': '<p><strong>App-Daten bleiben auf dem Gerät.</strong> ChemieStart überträgt keine '
+                 'Profilnamen, Lernfortschritte, Laborbucheinträge oder Sprachdaten an den Entwickler. '
+                 'Es gibt kein Benutzerkonto, keine Werbung, kein Tracking, keine Analyse und keine '
+                 'Drittanbieter-SDKs. Kamera, Mikrofon, Kontakte und Standort werden nicht '
+                 'verwendet.</p><p><strong>Lokale Speicherung.</strong> Bis zu drei Profile, '
+                 'Fortschritt, laufende Missionen, Laborbuch und Einstellungen werden lokal '
+                 'gespeichert. Der Kaufstatus wird lokal zwischengespeichert. Die Eltern-PIN liegt '
+                 'ausschließlich als gesalzener Hash im gerätegebundenen Schlüsselbund. Fortschritt und '
+                 'Laborbuch lassen sich im Elternbereich zurücksetzen. Das Löschen der App entfernt '
+                 'ihre App-Daten; der Schlüsselbundeintrag kann erhalten bleiben. Geräte-Backups werden '
+                 'durch Ihre Apple-Einstellungen verwaltet.</p><p><strong>Vorlesestimme.</strong> Die '
+                 'Sprachaufnahmen wurden vorab mit OpenAI erzeugt und sind im App-Paket enthalten. Beim '
+                 'Vorlesen sendet die App weder Texte noch Stimmen an OpenAI. Es gibt keine '
+                 'Mikrofonaufnahme und keine Sprachverarbeitung in der Cloud.</p><p><strong>Kauf und '
+                 'Wiederherstellung.</strong> Apple StoreKit wickelt den optionalen Einmalkauf ab. '
+                 'Apple verarbeitet Zahlung und Kaufhistorie; die App prüft die Kaufberechtigung. Der '
+                 'Entwickler erhält keine Zahlungs- oder Kartendaten. Kauf und Wiederherstellung liegen '
+                 'im geschützten Elternbereich.</p><p><strong>Support und Kontakt.</strong> '
+                 'Verantwortlich ist Harun Nakas, erreichbar über die oben genannte Supportadresse. '
+                 'Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Adresse und Nachricht zur '
+                 'Bearbeitung Ihrer Anfrage verwendet. Bitte senden Sie keine vertraulichen Daten aus '
+                 'dem Laborbuch. Für die Website gelten die technischen Verarbeitungen des '
+                 'Hosting-Anbieters GitHub Pages.</p>'}
+
 GROUPS = ["Medizin & Praxis", "Reise & Städte", "Hotels & Gastronomie", "Alltag & Sonstiges"]
 
 # --------------------------------------------------------------------------
@@ -604,6 +680,9 @@ def build_support_hub():
           head(f"Support – Apps von {DEV}",
                "Support und Hilfe zu allen Apps von Harun Nakas.", 1)
           + body + foot(1))
+
+
+APP_SUPPORT['chemiestart'] = APP_CHEMIESTART_SUPPORT
 
 
 def build_app_page(app):
